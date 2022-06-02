@@ -1,3 +1,12 @@
+console.log(
+    `%cCoding Project #3`, `background-color:#eee`,
+
+    `
+
+Welcome to the third coding project, which is a design I found initially on Pinterest. It was a repost of a website done by Piotr Adam Kwiatkowski. The coding didn't take too long to do, but I did have to design parts of the site myself because the original design only included the desktop version of the website, and it also didn't include any of the pages the site links to. Hope you like it.
+    `
+)
+
 const mobileNav= document.querySelector('#mobile-nav-container');
 const nav = document.querySelector('nav');
 let navToggler = true;
@@ -14,7 +23,7 @@ function navToggle(){
     navToggler = !navToggler;
  
     if(navToggler){
-        mobileNav.style.transform = "translateX(-100%)";
+        mobileNav.style.transform = "translateX(calc(-100% - 3px))";
     }
     else {
         mobileNav.style.transform = "translateX(0%)";
