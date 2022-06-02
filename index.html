@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Outdoors</title>
+
+    <!--StyleSheets-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="setup.css">
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
+    <!--CDNs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="container flex center">
+        <div id="nav-wrapper" class="flex center uppercase">
+            <ul id="nav-links" class="grid center link-container">
+                <li class="menu_item nav_link">
+                    <a href="#">About</a>
+                </li>
+                <li class="menu_item nav_link">
+                    <a href="#">Explore</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#">
+                        <img id="logo" src="icons/logo.png" alt="Logo">
+                    </a>
+                </li>
+                <li class="menu_item nav_link">
+                    <a href="#">Journal</a>
+                </li>
+                <li class="menu_item nav_link">
+                    <div id="search-container">
+                        <i class="fa fa-search"></i>
+                        <input id="search" class="text-white uppercase" type="search" href="#" placeholder="SEARCH">
+                    </div>
+                </li>
+                <li class="menu_item nav_toggle_container">
+                    <button id="nav-toggle" class="fs-500" aria-label="menu-toggle" aria-controls="mobile-nav-container"
+                        onclick="navToggle()">
+                        <i class="fa fa-bars text-white" aria-expanded="false"></i>
+                    </button>
+                </li>
+            </ul>
+            <div id="mobile-nav-container">
+                <ul id="mobile-nav" class="link-container">
+                    <li class="mobile_nav_links"><a href="#">About</a></li>
+                    <li class="mobile_nav_links"><a href="#">Explore</a></li>
+                    <li class="mobile_nav_links"><a href="#">Journal</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <header id="hero" class="">
+
+        <div id="hero-wrapper" class="flex center fill-space container">
+            <h1 class="capitalize">The great outdoors</h1>
+            <p>Wander often. Wonder always.</p>
+            <button id="play-button" class="flex center pointer" aria-label="Play Button" onclick="playButton();">
+                <i class="fas fa-play text-white"></i>
+            </button>
+        </div>
+
+    </header>
+
+    <div id="pop-up-video-container" class="flex center container" onclick="closePopUpVid();" >
+        <video controls>
+            <source src="videos/memories-from-saudi.mp4">
+            <source src="videos/memories-from-saudi.ogg">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+
+
+    <div id="explore-the-world">
+        <div id="explore-the-world-container" class="container">
+
+            <h2 class="fs-600">Explore the World</h2>
+            <div class="flex center">
+                <p class="fwidth-75">We seek to provide the most authentic content from athletes, adventurers, explorers and travellers around
+                    the world. Our long term mission is to educate, inpsire and enable all peoples to experience and protect
+                    wilderness.</p>
+            </div>
+            <div id="cards" class="flex">
+                <section class="card one">
+                    <h3>Nærøyfjord</h3>
+                    <p class="uppercase">Norway</p>
+                </section>
+                <section class="card two">
+                    <h3>Antelope Canyon</h3>
+                    <p class="uppercase">United States</p>
+                </section>
+                <section class="card three">
+                    <h3>Grossglockner</h3>
+                    <p class="uppercase">Austria</p>
+                </section>
+            </div>
+            <a href="#" class="uppercase text-accent link flex center"><span>See More</span><i class="fa fa-chevron-right fs-300"></i></a>
+        </div>
+    </div>
+
+    <div id="the-journal">
+        <div id="the-journal-container" class="container">
+
+            <h2 class="fs-600">The Journal</h2>
+            <div class="flex center">
+                <p class="fwidth-75">Our favourite stories about public lands and opportunities for you to get involved in protecting your outdoor
+                experiences.</p>
+            </div>
+
+            <div id="the-journal-cards" class="flex center">
+                <section class="journal_card jcone">
+                    <div class="jcimg"></div>
+                    <p class="jcdate">May 30,2017</p>
+                    <h3 class="ff-serif fs-500">An Unforgettable</h3>
+                    <div class="flex center">
+                        <p class="fwidth-75">If you only have one day to visit Yosemite National Park and you want to make the most out of it.</p>
+                    </div>
+                </section>
+
+                <section class="journal_card jctwo">
+                    <div class="jcimg"></div>
+                    <p class="jcdate">May 26,2017</p>
+                    <h3 class="ff-serif fs-500">Symphonies in Steel</h3>
+                    <div class="flex center">
+                        <p class="fwidth-75">Crossing the Golden Gate Bridge from San Francisco, you arrive in Marin even before landing on solid ground.</p>
+                    </div>
+                </section>
+            </div>
+
+            <a href="#" class="uppercase text-accent link flex center"><span>All Posts</span><i class="fa fa-chevron-right fs-300"></i></a>
+        </div>
+    </div>
+
+
+    <div id="footer-img-container" class="container">
+        <div id="footer-img" class="fill-space"></div>
+    </div>
+
+    <footer class="flex center fill-space">
+
+        <div id="footer-container" class="fill-space container">
+            <ul class="flex center link-container">
+                <li id="copyright" class="flex"><span class="uppercase"> &copy; The great outdoors </span>All rights reserved</li>
+                <li>|</li>
+                <li class="uppercase"><a href="#">About</a></li>
+                <li class="uppercase"><a href="#">Explore</a></li>
+                <li class="uppercase"><a href="#">Journal</a></li>
+                <li class="uppercase"><a href="#">Search</a></li>
+            </ul>
+        </div>
+
+    </footer>  
+
+    <button id="scroll-to-top" class="pointer" type="button" aria-label="Scroll To Top Button" onclick = "scrollToTopFunc();">
+        <i class="fa fa-chevron-up text-white"></i>
+    </button>
+
+    <!--Scripts-->
+    <script src="script.js"></script>
+</body>
+
+</html>
