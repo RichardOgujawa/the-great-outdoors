@@ -379,5 +379,5 @@ footer a:focus {
     #footer-container li:nth-of-type(n+2):nth-of-type(-n+7) {
         display: none;
     }
-
+    
 }

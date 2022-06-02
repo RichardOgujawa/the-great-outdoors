@@ -74,5 +74,14 @@ function closePopUpVid(){
     popUpVid.pause();
 }
 
+function fnBrowserDetect(){
+    let userAgent = navigator.userAgent;
 
+    if(userAgent.match(/opr\//i)){
+        scrollToTop.style.display = "none";
+    } else {
+        scrollToTop.style.display = "block";
+    }
+}
 
+fnBrowserDetect();
