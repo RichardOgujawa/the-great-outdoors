@@ -1,0 +1,101 @@
+@import url(setup.css);
+
+h1 {
+    font-size: var(--fs-800);
+}
+
+/*Footer---------------------*/
+#footer-img-container {
+    width: 100%;
+    height: 50vh;
+}
+
+#footer-img {
+    background-image: radial-gradient(42em 18em ellipse at center, transparent, hsl(var(--clr-dark))), url(images/mountain-at-night.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+footer {
+    padding: 1.25em 0em; 
+}
+
+#footer-container {
+    width: 100%; 
+}
+
+#footer-hr {
+    width: 100%; 
+    height: 1px;
+    background-color: hsl(var(--clr-white));
+}
+
+#footer-container > ul {
+    --gap: 1em;
+    height: 100%;
+    width: 80%;
+    grid-template-columns: calc(50% - 2px) 2px calc(50% - 2px) ;
+}
+
+#footer-container hr{
+    background-color: red;
+    width: 2px; 
+    height: 100%;
+    outline: 3px solid red;
+}
+
+footer a:hover,
+footer a:focus {
+    color: hsl(var(--clr-accent))
+}
+
+@media(max-width: 1024px) {
+    #footer-container > ul {
+    width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    footer {
+        font-size: 9pt;
+    }
+}
+
+@media(max-width: 665px) {
+
+    /*Footer---------------------*/
+    #footer-container > ul {
+        grid-template-columns: 100%;
+    }
+    
+    #footer-container > ul {
+        width: 80%;
+    }
+    
+    #footer-container > ul > li:nth-of-type(2) {
+        display: none;
+    }
+    
+    #copyright,
+    #footer-menu {
+        justify-content: space-between;
+    }
+    
+    #copyright {
+        justify-content: center;
+    }
+
+    #footer-menu{
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 414px){
+    #footer-container > ul {
+        width: 100%;
+    }
+
+    #copyright {
+        justify-content: space-between;
+    }
+}

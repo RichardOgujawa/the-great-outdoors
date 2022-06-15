@@ -8,8 +8,12 @@
     <title>The Great Outdoors</title>
 
     <!--StyleSheets-->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="setup.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <!--Favicon-->
     <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
 
     <!--CDNs-->
@@ -23,18 +27,18 @@
         <div id="nav-wrapper" class="flex center uppercase">
             <ul id="nav-links" class="grid center link-container">
                 <li class="menu_item nav_link">
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                 </li>
                 <li class="menu_item nav_link">
-                    <a href="#">Explore</a>
+                    <a href="explore.html">Explore</a>
                 </li>
-                <li class="menu_item">
-                    <a href="#">
+                <li class="menu_item active">
+                    <a href="index.html">
                         <img id="logo" src="icons/logo.png" alt="Logo">
                     </a>
                 </li>
                 <li class="menu_item nav_link">
-                    <a href="#">Journal</a>
+                    <a href="journal.html">Journal</a>
                 </li>
                 <li class="menu_item nav_link">
                     <div id="search-container">
@@ -51,7 +55,7 @@
             </ul>
             <div id="mobile-nav-container">
                 <ul id="mobile-nav" class="link-container">
-                    <li class="mobile_nav_links"><a href="#">About</a></li>
+                    <li class="mobile_nav_links"><a href="about.html">About</a></li>
                     <li class="mobile_nav_links"><a href="#">Explore</a></li>
                     <li class="mobile_nav_links"><a href="#">Journal</a></li>
                 </ul>
@@ -87,25 +91,25 @@
 
             <h2 class="fs-600">Explore the World</h2>
             <div class="flex center">
-                <p class="fwidth-75">We seek to provide the most authentic content from athletes, adventurers, explorers and travellers around
+                <p class="fwidth">We seek to provide the most authentic content from athletes, adventurers, explorers and travellers around
                     the world. Our long term mission is to educate, inpsire and enable all peoples to experience and protect
                     wilderness.</p>
             </div>
             <div id="cards" class="flex">
                 <section class="card one">
-                    <h3>Nærøyfjord</h3>
+                    <h3 class="ff-serif">Nærøyfjord</h3>
                     <p class="uppercase">Norway</p>
                 </section>
                 <section class="card two">
-                    <h3>Antelope Canyon</h3>
+                    <h3 class="ff-serif">Antelope Canyon</h3>
                     <p class="uppercase">United States</p>
                 </section>
                 <section class="card three">
-                    <h3>Grossglockner</h3>
+                    <h3 class="ff-serif">Grossglockner</h3>
                     <p class="uppercase">Austria</p>
                 </section>
             </div>
-            <a href="#" class="uppercase text-accent link flex center"><span>See More</span><i class="fa fa-chevron-right fs-300"></i></a>
+            <a href="#" class="cta text-accent link"><span class="flex center"><span class="uppercase">See more</span><i class="fa fa-chevron-right fs-300"></i></span></a>
         </div>
     </div>
 
@@ -114,17 +118,17 @@
 
             <h2 class="fs-600">The Journal</h2>
             <div class="flex center">
-                <p class="fwidth-75">Our favourite stories about public lands and opportunities for you to get involved in protecting your outdoor
+                <p class="fwidth">Our favourite stories about public lands and opportunities for you to get involved in protecting your outdoor
                 experiences.</p>
             </div>
 
-            <div id="the-journal-cards" class="flex center">
+            <div id="the-journal-cards" class="grid center">
                 <section class="journal_card jcone">
                     <div class="jcimg"></div>
                     <p class="jcdate">May 30,2017</p>
                     <h3 class="ff-serif fs-500">An Unforgettable</h3>
                     <div class="flex center">
-                        <p class="fwidth-75">If you only have one day to visit Yosemite National Park and you want to make the most out of it.</p>
+                        <p class="fwidth">If you only have one day to visit Yosemite National Park and you want to make the most out of it.</p>
                     </div>
                 </section>
 
@@ -133,30 +137,37 @@
                     <p class="jcdate">May 26,2017</p>
                     <h3 class="ff-serif fs-500">Symphonies in Steel</h3>
                     <div class="flex center">
-                        <p class="fwidth-75">Crossing the Golden Gate Bridge from San Francisco, you arrive in Marin even before landing on solid ground.</p>
+                        <p class="fwidth">Crossing the Golden Gate Bridge from San Francisco, you arrive in Marin even before landing on solid ground.</p>
                     </div>
                 </section>
             </div>
 
-            <a href="#" class="uppercase text-accent link flex center"><span>All Posts</span><i class="fa fa-chevron-right fs-300"></i></a>
+            <a href="#" class="cta text-accent link"><span class="flex center"><span class="uppercase">All posts</span><i class="fa fa-chevron-right fs-300"></i></span></a>
         </div>
     </div>
+
 
 
     <div id="footer-img-container" class="container">
         <div id="footer-img" class="fill-space"></div>
     </div>
 
-    <footer class="flex center fill-space">
+    <hr id="footer-hr">
+    <footer class="fill-space">
 
-        <div id="footer-container" class="fill-space container">
-            <ul class="flex center link-container">
-                <li id="copyright" class="flex"><span class="uppercase"> &copy; The great outdoors </span>All rights reserved</li>
+        <div id="footer-container" class="fill-space container grid">
+            <ul class="fill-space grid center link-container">
+                <li id="copyright" class="flex center">
+                    <span class="uppercase"> &copy; The great outdoors </span>
+                    <span>All rights reserved</span>
+                </li>
                 <li>|</li>
-                <li class="uppercase"><a href="#">About</a></li>
-                <li class="uppercase"><a href="#">Explore</a></li>
-                <li class="uppercase"><a href="#">Journal</a></li>
-                <li class="uppercase"><a href="#">Search</a></li>
+                <ul id="footer-menu" class="flex center link-container">                 
+                    <li class="uppercase"><a href="about.html">About</a></li>
+                    <li class="uppercase"><a href="explore.html">Explore</a></li>
+                    <li class="uppercase"><a href="#">Journal</a></li>
+                    <li class="uppercase"><a href="#">Search</a></li>
+                </ul>
             </ul>
         </div>
 
@@ -166,8 +177,10 @@
         <i class="fa fa-chevron-up text-white"></i>
     </button>
 
-    <!--Scripts-->
-    <script src="script.js"></script>
+    
+    
 </body>
+<!--Scripts-->
+<script src="script.js"></script>
 
 </html>

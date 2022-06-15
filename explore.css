@@ -1,0 +1,82 @@
+/*Site Wrapper---------------*/
+#site-wrapper {
+    --gap: 3em;
+    padding-top: 12vh;
+    height: calc(100vh - (1.25em * 2 + 1.5rem));
+}
+
+#site-wrapper > * {
+    margin: 2.5em 0;
+    flex-basis: 50%;
+}
+
+/*Explore Details------------*/
+#explore-details {
+    overflow: scroll;
+}
+
+#explore-details hr{
+    width: 100%; 
+    margin: 1em 0em 2em;
+    height: 1px;
+    background-color: hsl(var(--clr-white));
+}
+
+#explore-details h3 {
+    text-align: right;
+    margin: 0em 0em 0.25em;
+}
+
+#explore-details p {
+    text-align: right;
+    margin-bottom: 1em;
+    font-weight: 400;
+}
+
+#explore-details p > a{
+    font-weight: 700;
+}
+
+.mapsBtn {
+    cursor: pointer;
+}
+
+#explore-info {
+    overflow: scroll;
+}
+
+.explore_img {
+    width: 100%; 
+    height: 20vh;
+    background-position: center 90%;
+    background-size: 100%;
+    transition: var(--speed) ease;
+    opacity: 0.7;
+}
+
+.explore_img:hover {
+    height: 40vh;
+    opacity: 1;
+    border: 2px solid white;
+}
+
+.explore_img:nth-of-type(1){
+    background-image: url(images/naeroyfjord-explore-img1.jpg);
+}
+.explore_img:nth-of-type(2){
+    background-image: url(images/naeroyfjord-explore-img2.jpg);
+}
+.explore_img:nth-of-type(3){
+    background-image: url(images/naeroyfjord-explore-img3.jpg);
+}
+
+#explore-cta {
+    margin-top: 2em;
+}
+/*googleMap------------------*/
+#googleMap {
+    width: 100%; 
+}
+
+
+/*---------------------------*/

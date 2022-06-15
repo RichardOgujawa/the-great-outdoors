@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Outdoors | About</title>
+
+    <!--StyleSheets-->
+    <link rel="stylesheet" href="setup.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="footer.css">
+
+
+
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
+    <!--CDNs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="container flex center">
+        <div id="nav-wrapper" class="flex center uppercase">
+            <ul id="nav-links" class="grid center link-container">
+                <li class="menu_item nav_link active">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="menu_item nav_link">
+                    <a href="explore.html">Explore</a>
+                </li>
+                <li class="menu_item">
+                    <a href="index.html">
+                        <img id="logo" src="icons/logo.png" alt="Logo">
+                    </a>
+                </li>
+                <li class="menu_item nav_link">
+                    <a href="journal.html">Journal</a>
+                </li>
+                <li class="menu_item nav_link">
+                    <div id="search-container">
+                        <i class="fa fa-search"></i>
+                        <input id="search" class="text-white uppercase" type="search" href="#" placeholder="SEARCH">
+                    </div>
+                </li>
+                <li class="menu_item nav_toggle_container">
+                    <button id="nav-toggle" class="fs-500" aria-label="menu-toggle" aria-controls="mobile-nav-container"
+                        onclick="navToggle()">
+                        <i class="fa fa-bars text-white" aria-expanded="false"></i>
+                    </button>
+                </li>
+            </ul>
+            <div id="mobile-nav-container">
+                <ul id="mobile-nav" class="link-container">
+                    <li class="mobile_nav_links"><a href="about.html">About</a></li>
+                    <li class="mobile_nav_links"><a href="explore.html">Explore</a></li>
+                    <li class="mobile_nav_links"><a href="journal.html">Journal</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <div id="about-container" class="flex">
+        <div id="about-details">
+
+            <h1 class="fs-500 ff-sans-serif">About Me</h1>
+            <h2 class="fs-800 ff-serif">Matthias Velden</h2>
+            <p class="ff-sans-serif">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras quis laoreet lacus, nec tincidunt odio. Aenean tincidunt mauris at ex blandit porta. Aliquam dapibus, mi et tempor ultrices, ante odio eleifend justo, ut condimentum est dui non ipsum. Ut sapien lacus, dignissim ut ligula in, tempor ullamcorper nulla. </p>
+
+
+            <ul id="social-media-container" class="link-container flex">
+                <li>
+                    <a href="https://instagram.com" class="">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://facebook.com">
+                        <i class="fa-brands fa-facebook"></i>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="about-image-container">
+        </div>
+
+    </div>
+
+
+    
+    <hr id="footer-hr">
+    <footer class="fill-space">
+
+        <div id="footer-container" class="fill-space container flex center">
+            <ul class="grid center link-container">
+                <li id="copyright" class="flex center">
+                    <span class="uppercase"> &copy; The great outdoors. </span>
+                    <span>All rights reserved</span>
+                </li>
+                <li>|</li>
+                <ul id="footer-menu" class="flex center link-container">                 
+                    <li class="uppercase flex"><a href="about.html">About</a></li>
+                    <li class="uppercase"><a href="explore.html">Explore</a></li>
+                    <li class="uppercase"><a href="#">Journal</a></li>
+                    <li class="uppercase"><a href="#">Search</a></li>
+                </ul>
+            </ul>
+        </div>
+
+    </footer>  
+
+    <button id="scroll-to-top" class="pointer" type="button" aria-label="Scroll To Top Button" onclick = "scrollToTopFunc();">
+        <i class="fa fa-chevron-up text-white"></i>
+    </button>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>

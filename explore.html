@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Great Outdoors | Explore</title>
+   <!--StyleSheets-->
+   <link rel="stylesheet" href="setup.css">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="explore.css">
+
+
+
+   <!--Favicon-->
+   <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+
+   <!--CDNs-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <nav class="container flex center">
+       <div id="nav-wrapper" class="flex center uppercase">
+           <ul id="nav-links" class="grid center link-container">
+               <li class="menu_item nav_link">
+                   <a href="about.html">About</a>
+               </li>
+               <li class="menu_item nav_link">
+                   <a href="explore.html">Explore</a>
+               </li>
+               <li class="menu_item">
+                   <a href="index.html">
+                       <img id="logo" src="icons/logo.png" alt="Logo">
+                   </a>
+               </li>
+               <li class="menu_item nav_link">
+                   <a href="journal.html">Journal</a>
+               </li>
+               <li class="menu_item nav_link">
+                   <div id="search-container">
+                       <i class="fa fa-search"></i>
+                       <input id="search" class="text-white uppercase" type="search" href="#" placeholder="SEARCH">
+                   </div>
+               </li>
+               <li class="menu_item nav_toggle_container">
+                   <button id="nav-toggle" class="fs-500" aria-label="menu-toggle" aria-controls="mobile-nav-container"
+                       onclick="navToggle()">
+                       <i class="fa fa-bars text-white" aria-expanded="false"></i>
+                   </button>
+               </li>
+           </ul>
+           <div id="mobile-nav-container">
+               <ul id="mobile-nav" class="link-container">
+                   <li class="mobile_nav_links"><a href="#">About</a></li>
+                   <li class="mobile_nav_links"><a href="#">Explore</a></li>
+                   <li class="mobile_nav_links"><a href="#">Journal</a></li>
+               </ul>
+           </div>
+       </div>
+
+   </nav>
+   
+   <div id="site-wrapper" class="flex container">
+
+    <div id="explore-details">
+        <h1>Explore</h1>
+    <div id="explore-selection">
+
+        <h2 class="text-light-gray">Most Popular</h2>
+        <span class="mapsBtn" id="naeroyfjord">Nærøyfjord</span> |
+        <span class="mapsBtn" id="naeroyfjord">Antelope Canyon</span> | 
+        <span class="mapsBtn" id="grossglockner">Grossglockner</span>
+
+        <h2 class="text-light-gray">Landscapes</h2>
+
+        <h2 class="text-light-gray">Monuments</h2>
+
+        <hr>
+    </div>
+    
+    <div id="explore-info">
+        <h3 class="fs-500">Nærøyfjord</h3>
+        <p class="line-break">The Nærøyfjord is a <a href="https://en.wikipedia.org/wiki/Fjord">fjord</a> in Aurland Municipality in Vestland county, Norway. The narrow fjord is a branch of the large Sognefjord, and it is featured on the "Norway in a Nutshell" daytrips for tourists. The 18-kilometre long fjord is only 500 metres wide in some parts.
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie tellus faucibus nisl finibus, at consectetur sem elementum. Morbi id odio vel nisi egestas viverra. Fusce porttitor condimentum accumsan. Pellentesque lorem tortor, dignissim sit amet lobortis in, efficitur eu sapien. Curabitur semper porta eleifend. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce augue quam, hendrerit ac condimentum a, vulputate sed risus. 
+        </p>
+
+        <div class="explore_img"></div>
+        <div class="explore_img"></div>
+        <div class="explore_img"></div>
+
+        <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiR9uGFr5f4AhXTS0EAHZLXDz8QFnoECAUQAQ&url=https%3A%2F%2Fwww.visitnorway.com%2Flistings%2Fthe-unesco-n%25C3%25A6r%25C3%25B8yfjord%2F12020%2F&usg=AOvVaw1hlqdxGQK5cfO_id5IUW79" id="explore-cta" class="dark-btn wide-padding-btn fill-space uppercase link">Visit Nærøyfjord</a>
+    </div>
+
+
+    </div>
+        
+    <div id="googleMap"></div>
+
+    </div>
+
+    
+    <footer class="flex center fill-space">
+
+        <div id="footer-container" class="fill-space container">
+            <ul class="flex center link-container">
+                <li id="copyright" class="flex"><span class="uppercase"> &copy; The great outdoors </span>All rights
+                    reserved</li>
+                <li>|</li>
+                <li class="uppercase"><a href="#">About</a></li>
+                <li class="uppercase"><a href="#">Explore</a></li>
+                <li class="uppercase"><a href="#">Journal</a></li>
+                <li class="uppercase"><a href="#">Search</a></li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="explore.js">
+    </script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9oKddx03e7l5w8-7rIKizUNFrP4QSu1k&callback=myMap"></script>
+</body>
+
+</html>

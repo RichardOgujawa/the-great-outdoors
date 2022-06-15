@@ -1,0 +1,100 @@
+#about-container {
+    width: 100%;
+    height: calc(100vh - (1.25em * 2 + 1.5rem));
+}
+
+#about-image-container {
+    background-image: radial-gradient(ellipse at center, #0001, hsl(var(--clr-dark)/50%)), url(images/about-me-img.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#about-container>* {
+    flex-basis: 50%;
+}
+
+#about-details {
+    padding: 10em 10vw;
+}
+
+#about-details h1 {
+    margin-bottom: 0.25em;
+}
+
+#about-details h2 {
+    margin-bottom: 0.25em;
+}
+
+#social-media-container {
+    margin-top: 5em;
+}
+
+#social-media-container i {
+    font-size: 1.25rem;
+}
+
+#social-media-container>li>a>i:hover+p {
+    color: var(--text-white);
+}
+
+#social-media-container {
+    margin-top: 10em;
+    gap: 2.5em;
+}
+
+#social-media-container>li p,
+#about-details h1,
+#about-details p {
+    opacity: 0.7;
+}
+
+
+@media (max-width: 1024px) {
+    #about-container {
+        flex-direction: column-reverse;
+        height: 100vh;
+    }
+
+    #about-details {
+        padding: 1.5em 10vw 2em;
+    }
+
+    #social-media-container {
+        margin: 3em 0em 2em;
+        gap: 2.5em;
+    }
+
+    #about-image-container {
+        background-size: 150%;
+    }
+}
+
+@media (max-width: 768px) {
+    #about-image-container {
+        background-size: 100%;
+    }
+    .username {
+        display: none;
+    }
+
+}
+
+@media(max-width: 414px) {
+    #about-container {
+        height: 125vh;
+        padding-bottom: 3em;
+        flex-direction: column-reverse;
+    }
+
+    #about-image-container {
+        background-size: 200%;
+        background-position: center 50%;
+    }
+    #about-details {
+        padding: 3em 10vw 2em;
+    }
+
+
+
+}

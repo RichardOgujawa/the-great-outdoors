@@ -1,28 +1,32 @@
 /*/ SETUP FILE /*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Tiro+Devanagari+Marathi:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Segoe UI Regular';
+    src: url(fonts/segoe-ui.ttf);
+}
 
 /*------------------------------------*/
 /* Custom Properties */
 /*------------------------------------*/
 :root {
     /*Colors*/
-    --clr-dark: 240 9% 4%;
-    --clr-dark-gray: 20 9% 56%;
+    --clr-dark: 0 0% 6%; 
+    --clr-light-gray: 0 0% 50%;
+    --clr-dark-gray: 20 0% 15%;
     --clr-white: 300 0% 100%;
     --clr-light-accent: 208 100% 70%;
     --clr-accent: 208 100% 56%;
 
     /*Font Sizes */
     /*2x-large*/
-    --fs-800: 5.5rem;
+    --fs-800: 4.4rem;
     /*x-large*/
     --fs-700: 3.5rem;
     /*large*/
     --fs-600: 2rem;
     /*medium*/
-    --fs-500: 1.5rem;
+    --fs-500: 1.3rem;
     /*regular*/
     --fs-400: 1rem;
     /*small*/
@@ -32,8 +36,8 @@
     /*Recommended not to go lower than 12pt*/
 
     /* Font Family */
-    --ff-sans-serif: "Roboto", sans-serif;
-    --ff-serif: "Tiro Devanagari Marathi", "Times New Roman", serif;
+    --ff-sans-serif: "Segoe UI Regular", sans-serif;
+    --ff-serif: "DM Serif Display", "Times New Roman", serif;
 
     /* Transition */
     --speed: 500ms;
@@ -239,11 +243,11 @@ hr {
 }
 
 .text-light-gray {
-    color: hsl(var(--clr-dark-gray));
+    color: hsl(var(--clr-light-gray));
 }
 
 .text-dark-gray {
-    color: hsl(var(--clr-light-gray));
+    color: hsl(var(--clr-dark-gray));
 }
 
 
@@ -267,6 +271,10 @@ hr {
 
 .capitalize {
     text-transform: capitalize;
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
 }
 
 .fs-700 {
@@ -304,8 +312,8 @@ hr {
     line-height: 1.1;
 }
 
-.fwidth-75 {
-    width: 75ch;
+.fwidth {
+    width: 68ch;
 }
 
 .bold {
@@ -335,16 +343,14 @@ hr {
     padding: 0.5em;
     display: grid;
     place-items: center;
-    border: 3px solid hsl(var(--clr-dark));
     font-weight: 700;
     cursor: pointer;
 }
 
 .wide-padding-btn {
-    padding: 0.5em 1.2em;
+    padding: 1.5em 1.2em;
     display: grid;
     place-items: center;
-    border: 3px solid hsl(var(--clr-dark));
     font-weight: 700;
     cursor: pointer;
 }
@@ -369,13 +375,43 @@ hr {
     background-color: hsl(var(--clr-light-accent)); 
 }
 
+.dark-btn {
+    background-color: hsl(var(--clr-dark)); 
+    color: hsl(var(--clr-white));
+    border: 2px solid hsl(var(--clr-white));
+}
+
+.dark-btn:hover {
+    background-color: hsl(var(--clr-light)); 
+}
+
+/*Call to Action Buttons*/
+a.cta {
+    display: inline-block;
+}
+
+a.cta > span {
+    padding: 1em;
+    outline: 3px solid hsl(var(--clr-accent));  
+    gap: 0.5em;
+}
+
+.cta i {
+    transition: var(--speed) ease;
+}
+
+a.cta > span:hover>i {
+    transform: translateX(0.5em);
+}
+
+
 
 
 /*-----------------------*/
 /*Breakpoints*/
 /*-----------------------*/
 
-/* There are media queries for max-width: 1336px, 1206px, 1024px, 810px, 684px, 484px */
+/* There are media queries for max-width: 1336px, 1237px, 1024px, 768px, 684px, 414px */
 
 /* More specific media queries (height + width): 
 KEEP IN MIND THAT SOME OF THESE ISSUES CAN EASILY BE FIXED BY ADDING A MIN VALUE TO PADDINGS AND HEIGHTS SO THAT THE SMALLER OF THE TWO VALUES IS SELECTED FOR EXAMPLE AT 3:10:00 OF KEVIN POWELL'S DESIGN SYSTEMS VIDEO*/
@@ -388,3 +424,27 @@ Display type rules (grid, flex, block, etc.)
 Color rules (background, color, etc.) 
 Animation rules (transform, transition, etc.)
 */
+
+@media(max-width: 1336px){
+    
+}
+
+@media(max-width: 1237px){
+    
+}
+
+@media(max-width: 1024px){
+    
+}
+
+@media(max-width: 768px){
+    :root {
+        font-size: 10pt;
+    }
+}
+
+@media(max-width: 414px){
+    :root {
+        --fs-800: 4rem;
+    }
+}
