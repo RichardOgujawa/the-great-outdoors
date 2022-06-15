@@ -8,9 +8,11 @@
 
     <title>The Great Outdoors | Explore</title>
    <!--StyleSheets-->
-   <link rel="stylesheet" href="setup.css">
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="explore.css">
+   <link rel="stylesheet" href="css/setup.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/nav.css">
+   <link rel="stylesheet" href="css/footer.css">
+   <link rel="styleheet" href="css/explore.css">
 
 
 
@@ -30,7 +32,7 @@
                <li class="menu_item nav_link">
                    <a href="about.html">About</a>
                </li>
-               <li class="menu_item nav_link">
+               <li class="menu_item nav_link active">
                    <a href="explore.html">Explore</a>
                </li>
                <li class="menu_item">
@@ -105,23 +107,33 @@
     </div>
 
     
-    <footer class="flex center fill-space">
+    <hr id="footer-hr">
+    <footer class="fill-space">
 
-        <div id="footer-container" class="fill-space container">
-            <ul class="flex center link-container">
-                <li id="copyright" class="flex"><span class="uppercase"> &copy; The great outdoors </span>All rights
-                    reserved</li>
+        <div id="footer-container" class="fill-space container flex center">
+            <ul class="grid center link-container">
+                <li id="copyright" class="flex center">
+                    <span class="uppercase"> &copy; The great outdoors. </span>
+                    <span>All rights reserved</span>
+                </li>
                 <li>|</li>
-                <li class="uppercase"><a href="#">About</a></li>
-                <li class="uppercase"><a href="#">Explore</a></li>
-                <li class="uppercase"><a href="#">Journal</a></li>
-                <li class="uppercase"><a href="#">Search</a></li>
+                <ul id="footer-menu" class="flex center link-container">                 
+                    <li class="uppercase flex"><a href="about.html">About</a></li>
+                    <li class="uppercase"><a href="explore.html">Explore</a></li>
+                    <li class="uppercase"><a href="#">Journal</a></li>
+                    <li class="uppercase"><a href="#">Search</a></li>
+                </ul>
             </ul>
         </div>
 
-    </footer>
+    </footer>  
 
-    <script src="explore.js">
+    <button id="scroll-to-top" class="pointer" type="button" aria-label="Scroll To Top Button" onclick = "scrollToTopFunc();">
+        <i class="fa fa-chevron-up text-white"></i>
+    </button>
+
+
+    <script src="scripts/explore.js">
     </script>
 
     <script

@@ -7,9 +7,9 @@ h1 {
 /*Hero-----------------------*/
 #hero {
     background-image:
-    linear-gradient(to top, #000, transparent 12%), 
+    linear-gradient(to top, hsl(var(--clr-dark)), transparent 12%), 
     radial-gradient(ellipse at center, #0004 10%, black), 
-    url(images/hero-bg.jpg);
+    url(../images/hero-bg.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -69,17 +69,17 @@ h1 {
 }
 
 .one {
-    background-image: linear-gradient(#0001 50%, hsl(var(--clr-dark)/75%)), url(images/naeroyfjord.jpg);
+    background-image: linear-gradient(#0001 50%, hsl(var(--clr-dark)/75%)), url(../../images/naeroyfjord.jpg);
     background-size: cover;
 }
 
 .two {
-    background-image: linear-gradient(#0003 40%, hsl(var(--clr-dark)/75%)), url(images/antelope-canyon.jpg);
+    background-image: linear-gradient(#0003 40%, hsl(var(--clr-dark)/75%)), url(../../images/antelope-canyon.jpg);
     background-size: cover;
 }
 
 .three {
-    background-image: linear-gradient(#0003 40%, hsl(var(--clr-dark))), url(images/grossglockner.jpeg);
+    background-image: linear-gradient(#0003 40%, hsl(var(--clr-dark))), url(../../images/grossglockner.jpeg);
     margin-bottom: 4em;
     background-size: cover;
 }
@@ -142,12 +142,12 @@ video {
 }
 
 .jcone>.jcimg {
-    background-image: url(images/yosemite-national-park.webp);
+    background-image: url(../images/yosemite-national-park.webp);
     background-size: cover;
 }
 
 .jctwo>.jcimg {
-    background-image: url(images/golden-gate-bridge.jpg);
+    background-image: url(../images/golden-gate-bridge.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -232,15 +232,15 @@ video {
     }
 
     .one {
-        background-image: linear-gradient(#0001 40%, hsl(var(--clr-dark)/100%)), url(images/naeroyfjord.jpg);
+        background-image: linear-gradient(#0001 40%, hsl(var(--clr-dark)/100%)), url(../images/naeroyfjord.jpg);
     }
 
     .two {
-        background-image: linear-gradient(#0001 40%, hsl(var(--clr-dark)/75%)), url(images/antelope-canyon.jpg);
+        background-image: linear-gradient(#0001 40%, hsl(var(--clr-dark)/75%)), url(../images/antelope-canyon.jpg);
     }
 
     .three {
-        background-image: linear-gradient(#0001 40%, hsl(var(--clr-dark)/75%)), url(images/grossglockner.jpeg);
+        background-image: linear-gradient(#0001 40%, hsl(var(--clr-dark)/75%)), url(../images/grossglockner.jpeg);
     }
 
     .card > p {

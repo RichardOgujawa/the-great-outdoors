@@ -4,7 +4,7 @@
 }
 
 #about-image-container {
-    background-image: radial-gradient(ellipse at center, #0001, hsl(var(--clr-dark)/50%)), url(images/about-me-img.jpeg);
+    background-image: radial-gradient(ellipse at center, #0001, hsl(var(--clr-dark)/50%)), url(../images/about-me-img.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
