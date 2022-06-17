@@ -12,7 +12,7 @@
 :root {
     /*Colors*/
     --clr-dark: 0 0% 6%; 
-    --clr-light-gray: 0 0% 50%;
+    --clr-light-gray: 0 0% 55%;
     --clr-dark-gray: 20 0% 15%;
     --clr-white: 300 0% 100%;
     --clr-light-accent: 208 100% 70%;
@@ -41,6 +41,7 @@
 
     /* Transition */
     --speed: 500ms;
+    --cubic-bezier: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 
@@ -386,21 +387,33 @@ hr {
 }
 
 /*Call to Action Buttons*/
-a.cta {
+a.cta, 
+a.small-cta {
     display: inline-block;
 }
 
-a.cta > span {
-    padding: 1em;
+a.cta > span,
+a.small-cta > span {
     outline: 3px solid hsl(var(--clr-accent));  
     gap: 0.5em;
 }
 
-.cta i {
+a.cta > span{
+    padding: 1em;
+}
+
+a.small-cta > span{
+    padding: 1em 2em;
+}
+
+.cta i, .small-cta i {
     transition: var(--speed) ease;
 }
 
-a.cta > span:hover>i {
+
+
+a.cta > span:hover>i, 
+a.small-cta > span:hover>i {
     transform: translateX(0.5em);
 }
 

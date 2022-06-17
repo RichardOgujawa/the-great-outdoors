@@ -1,0 +1,18 @@
+
+/*Scroll To Top Button-------*/
+#scroll-to-top{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    padding-inline: 1em; 
+    aspect-ratio: 1;
+    background-color: hsl(var(--clr-dark)/50%);
+    border-radius: 3px;
+    border: 1.5px solid #fff7;
+    transition:  var(--speed) ease-in-out;
+    transform: translate(-50%, 300%);
+}
+
+#scroll-to-top:hover{
+    background-color: hsl(var(--clr-dark)/90%);
+}

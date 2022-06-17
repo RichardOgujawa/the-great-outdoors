@@ -11,7 +11,7 @@ h1 {
 }
 
 #footer-img {
-    background-image: radial-gradient(42em 18em ellipse at center, transparent, hsl(var(--clr-dark))), url(images/mountain-at-night.jpg);
+    background-image: radial-gradient(42em 18em ellipse at center, transparent, hsl(var(--clr-dark))), url(../images/mountain-at-night.jpg);
     background-position: center;
     background-size: cover;
 }

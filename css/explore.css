@@ -1,82 +1,167 @@
 /*Site Wrapper---------------*/
 #site-wrapper {
-    --gap: 3em;
-    padding-top: 12vh;
-    height: calc(100vh - (1.25em * 2 + 1.5rem));
-}
-
-#site-wrapper > * {
-    margin: 2.5em 0;
-    flex-basis: 50%;
-}
-
-/*Explore Details------------*/
-#explore-details {
-    overflow: scroll;
-}
-
-#explore-details hr{
     width: 100%; 
-    margin: 1em 0em 2em;
-    height: 1px;
-    background-color: hsl(var(--clr-white));
+    /* height: calc(100vh - (1.25em * 2 + 1.5rem)); */
+    height: 100%;
 }
 
-#explore-details h3 {
-    text-align: right;
-    margin: 0em 0em 0.25em;
+#site-wrapper-grid {
+    grid-template-columns: 1fr 3fr 1fr;
+    height: inherit;
+    padding: 1em 0em;
 }
 
-#explore-details p {
-    text-align: right;
-    margin-bottom: 1em;
-    font-weight: 400;
+#site-wrapper-grid > * {
+    padding-top: 15vh;
 }
 
-#explore-details p > a{
-    font-weight: 700;
+/*BREADCRUMBS----------------*/
+#breadcrumbs {
+    flex-direction: column;
+    --gap: 2em;
+}
+/*Back Button----------------*/
+#back-button-container {
+    width: 100%;
 }
 
-.mapsBtn {
-    cursor: pointer;
+#back-button {
+    background: transparent;
+    border: none; 
+    --gap: 1em;
+    opacity: 0.6; 
 }
 
-#explore-info {
-    overflow: scroll;
-}
-
-.explore_img {
-    width: 100%; 
-    height: 20vh;
-    background-position: center 90%;
-    background-size: 100%;
-    transition: var(--speed) ease;
-    opacity: 0.7;
-}
-
-.explore_img:hover {
-    height: 40vh;
+#back-button:hover {
     opacity: 1;
-    border: 2px solid white;
 }
 
-.explore_img:nth-of-type(1){
-    background-image: url(images/naeroyfjord-explore-img1.jpg);
-}
-.explore_img:nth-of-type(2){
-    background-image: url(images/naeroyfjord-explore-img2.jpg);
-}
-.explore_img:nth-of-type(3){
-    background-image: url(images/naeroyfjord-explore-img3.jpg);
+#timeline {
+    position: relative;
+    height: 100%; 
+    width: 100%;
 }
 
-#explore-cta {
-    margin-top: 2em;
-}
-/*googleMap------------------*/
-#googleMap {
-    width: 100%; 
+#timeline > hr{
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 80%; 
+    width: 0.1em; 
+    background-color: hsl(var(--clr-white)/20%);
 }
 
+#timeline-container {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
 
-/*---------------------------*/
+#timeline-container > div{
+    grid-template-columns: 50% 0.5em 50%;
+}
+
+#timeline-container > div > div{
+    background-color: hsl(var(--clr-white));
+    border-radius: 50%;
+    width: 0.5em; 
+    aspect-ratio: 1;
+}
+
+#timeline-container > p {
+    grid-template-columns: 10% 0.5em auto;
+}
+
+#num-01, #num-02 {
+    text-align: right;
+}
+
+.selected {
+    border: 1px solid hsl(var(--clr-white)/30%); 
+    padding: 0.5em;
+}
+
+/*EXPLORE WHERE--------------*/
+/*Explore--------------------*/
+#explore-where-content {
+    flex-direction: column;
+    --gap: 2.5em;
+    padding-bottom: 3em;
+}
+
+#explore-where-content h1 {
+    text-align: center;
+}
+
+#explore-where-container {
+    width: 80%;
+    justify-content: space-between;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 2em;
+    width: 17vw;
+    height: 55vh;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(to top, hsl(var(--clr-dark)/90%), transparent), url(../images/earth-2.jpg);
+    text-align: center;
+}
+
+.two {
+    background-image: linear-gradient(to top, hsl(var(--clr-dark)/90%), transparent), url(../images/adventurer.jpg);
+    background-size: 150%;
+    
+}
+
+.card p {
+    color: hsl(var(--clr-white)/50%);
+}
+
+/*Drop Down Menu-------------*/
+
+#drop-down-input {
+    border: 1px solid hsl(var(--clr-white));
+    text-align: center;
+    width: 80%;
+    padding: 0.5em;
+    opacity: 0.6;
+    transition: var(--speed) ease;
+}
+
+#drop-down-input:hover {
+    opacity: 1;
+}
+
+#drop-down-menu {
+    width: 90%;
+    height: 100%;
+    padding-top: 0; 
+    display: none;
+}
+
+#drop-down-menu-container {
+    overflow: scroll;
+    height: 50vh;
+}
+
+#drop-down-container:hover {
+    opacity: 1;
+}
+
+.retract {
+    transition: var(--speed) ease;
+    transform: translateX(-10px);
+    opacity: 0;
+}
+.display {
+    transition: var(--speed) ease;
+    transform: translateX(0px);
+    opacity: 0.5;
+}
